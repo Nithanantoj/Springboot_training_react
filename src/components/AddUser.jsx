@@ -156,7 +156,9 @@ const AddUser = () => {
                     <h2 className="text-2xl font-bold mb-6 text-gray-800 text-center">
                         User List
                     </h2>
+                    <div className="max-h-[400px] overflow-y-auto">
                     <UserList users={users} setUsers={setUsers} />
+                    </div>
                 </div>
             </div>
         </>
