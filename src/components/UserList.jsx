@@ -7,10 +7,8 @@ const UserList = ({ users, setUsers}) => {
 
     const handleDeleteUser = async (rollno) => {
         try {
-            // API call to delete user
-            await axios.delete(`https://springboot-training-1-wk39.onrender.com/delete/${rollno}`);
+            await axios.delete(`https://springboot-training-1-wk39.onrender.com/api/delete/${rollno}`);
             
-            // Remove user from state after successful deletion
             setUsers(users.filter((user) => user.rollno !== rollno));
             alert(`User with roll number ${rollno} deleted successfully`);
         } catch (error) {
